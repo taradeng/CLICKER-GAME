@@ -1,5 +1,14 @@
-//mode
+import ddf.minim.*;
+import ddf.minim.analysis.*;
+import ddf.minim.effects.*;
+import ddf.minim.signals.*;
+import ddf.minim.spi.*;
+import ddf.minim.ugens.*;
 
+Minim minim; //toolbox of functions used to load files 
+AudioPlayer bump, coin, theme, gameover; //individual sound files 
+//mode
+//mode variables
 int mode; //name your modes--easier. modes to divide up void draw. final locks int
 
 final int INTRO = 0;
@@ -48,8 +57,13 @@ void setup() {
 
   rectMode(CENTER);
 
-  
-
+  //loading sound files. activates library: new/this not from comp 11
+  minim = new Minim(this);
+  coin = minim.loadFile("coinsound.wav");
+  bump = minim.loadFile("bump.wav");
+  gameover = minim.loadFile("gameoversound.wav");
+  theme = minim.loadFile("mario bros theme.mp3");
+  //theme is mp3!
 }
 
 

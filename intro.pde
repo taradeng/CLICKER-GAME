@@ -12,10 +12,16 @@ void intro() {
   textSize(32); //up to 72
   text("Start Game", 400, 395 ); //text has to be in double quotes
   
+  //theme sound 
+  theme.play();
+  
   
 }
 
 void introClicks() {
   if (mouseX > 250  && mouseX < 550  && mouseY > 350 && mouseY < 450)
   mode = GAME;
+  theme.pause();
+  //rewind allows music to be played from the start 
+  theme.rewind();
 }
