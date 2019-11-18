@@ -3,7 +3,7 @@ import ddf.minim.analysis.*;
 import ddf.minim.effects.*;
 import ddf.minim.signals.*;
 import ddf.minim.spi.*;
-import ddf.minim.ugens.*;
+import ddf.minim.ugens.*;  
 
 Minim minim; //toolbox of functions used to load files 
 AudioPlayer bump, coin, theme, gameover; //individual sound files 
@@ -19,6 +19,10 @@ final int PAUSE = 2;
 
 final int GAMEOVER = 3;
 
+PImage cookie;
+
+PImage milk;
+
 
 
 //target
@@ -30,6 +34,9 @@ int score, lives;
 
 
 void setup() {
+  
+  cookie = loadImage ("cookie.jpg");
+  milk = loadImage ("milk and cookies.jpg");
 
   x = 400;
 
@@ -69,6 +76,7 @@ void setup() {
 
 
 void draw() {
+ 
 
   if (mode == INTRO) {
 

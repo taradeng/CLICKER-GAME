@@ -1,14 +1,17 @@
 void game() {
-  background(0, 255, 0);
+  background(255);
   
+
   fill(0);
   textSize(40);
-  text("Score: " + score, 100, 100);
-  text("Lives: " + lives, 100, 150);
+  text("cookies: " + score, 100, 100);
+  text("lives: " + lives, 100, 150);
   
   //target
   strokeWeight (4);
-  fill(245);
+  fill(245, 0, 0, 23);
+  
+  image(cookie, x-50, y-50, 100, 100);
   ellipse(x, y, 100, 100);
   
   //movement
@@ -19,6 +22,8 @@ void game() {
   if (y < 50 || y > 750) vy = vy * -1;
   if (x < 50 || x > 750) vx = vx * -1;
   //50 makes bounce off edge of circle
+  
+ 
 }
 
 void gameClicks(){
@@ -39,4 +44,5 @@ void gameClicks(){
      bump.play();
   
   }
+
 }
