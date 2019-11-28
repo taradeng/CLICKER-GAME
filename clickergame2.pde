@@ -19,9 +19,7 @@ final int PAUSE = 2;
 
 final int GAMEOVER = 3;
 
-final int pause = 4;
-
-final int options = 5;
+final int options = 4;
 
 PImage cookie;
 
@@ -103,6 +101,10 @@ void draw() {
   } else if (mode == GAMEOVER) {
 
     gameover();
+    
+      } else if (mode == options) {
+
+    options();
 
   } else {
 

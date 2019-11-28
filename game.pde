@@ -43,7 +43,7 @@ void gameClicks(){
      bump.play();
      
    if (mouseX > 650 && mouseX < 750  && mouseY > 10 && mouseY < 80)
-   mode=pause;
+   mode=PAUSE;
    
     text("play", 700, 50);
    
