@@ -19,10 +19,15 @@ final int PAUSE = 2;
 
 final int GAMEOVER = 3;
 
+final int pause = 4;
+
+final int options = 5;
+
 PImage cookie;
 
 PImage milk;
 
+PImage milk2;
 
 
 //target
@@ -37,6 +42,7 @@ void setup() {
   
   cookie = loadImage ("cookie.jpg");
   milk = loadImage ("milk and cookies.jpg");
+  milk2 = loadImage ("milk2.jpg");
 
   x = 400;
 

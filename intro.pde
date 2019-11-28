@@ -14,6 +14,9 @@ void intro() {
   text("Start Game", 400, 395 ); //text has to be in double quotes
   textSize(45);
   text("Milk and Cookies", 400, 300);
+  fill(0);
+  textSize(32);
+  text("options", 600, 600);
   
   //theme sound 
   theme.play();
@@ -27,4 +30,7 @@ void introClicks() {
   theme.pause();
   //rewind allows music to be played from the start 
   theme.rewind();
+  
+  if (mouseX > 550  && mouseX < 650  && mouseY > 550 && mouseY < 650)
+  mode = options;
 }

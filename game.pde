@@ -1,12 +1,6 @@
 void game() {
   background(255);
   
-
-  fill(0);
-  textSize(40);
-  text("cookies: " + score, 100, 100);
-  text("lives: " + lives, 100, 150);
-  
   //target
   strokeWeight (4);
   fill(245, 0, 0, 23);
@@ -23,6 +17,11 @@ void game() {
   if (x < 50 || x > 750) vx = vx * -1;
   //50 makes bounce off edge of circle
   
+  fill(0);
+  textSize(40);
+  text("cookies: " + score, 100, 100);
+  text("lives: " + lives, 100, 150);
+  text("pause", 700, 50);
  
 }
 
@@ -42,6 +41,12 @@ void gameClicks(){
     // if if statement only has one, can delete braces
      mode = GAMEOVER; 
      bump.play();
+     
+   if (mouseX > 650 && mouseX < 750  && mouseY > 10 && mouseY < 80)
+   mode=pause;
+   
+    text("play", 700, 50);
+   
   
   }
 
